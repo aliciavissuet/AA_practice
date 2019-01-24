@@ -19,7 +19,7 @@ class House < ApplicationRecord
   end
 
   def better_seeds_query
-    self.plants.select('seeds.*').joins(:seeds).group('seeds.id')
+    self.plants.includes(:seeds).pluck('plants.species, seeds.count')
   end
 
 end

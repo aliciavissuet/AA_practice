@@ -20,6 +20,13 @@ class Route < ApplicationRecord
   end
 
   def better_drivers_query
-    self.buses.select("buses.drivers").joins(:drivers).group('buses.id')
+    buses_with_drivers = self.buses.includes(:drivers)
+    bus_d = {}
+    buses_with_drivers.each do |bus|
+      drivers = []
+      bus.drivers.each {|driver| drivers << driver.name}
+      bus_d[bus.id] = drivers
+    end
+    bus_d
   end
 end
