@@ -23,8 +23,9 @@ Elephant.prototype.addTrick = function(trick) {
 };
 
 Elephant.prototype.play = function() {
-  let tr = this.tricks[(Math.random(0,this.tricks.length)]
-  console.log(`${this.name} is ${tr}!`)
+  let r = Math.floor(Math.random() * this.tricks.length);
+  let tr = this.tricks[r];
+  console.log(`${this.name} is ${tr}!`);
 }
 
 let ellie = new Elephant("Ellie", 185, ["giving human friends a ride", "playing hide and seek"]);
@@ -33,3 +34,7 @@ let kate = new Elephant("Kate", 234, ["writing letters", "stealing peanuts"]);
 let micah = new Elephant("Micah", 143, ["trotting", "playing tic tac toe", "doing elephant ballet"]);
 
 let herd = [ellie, charlie, kate, micah];
+
+Elephant.prototype.paradeHelper = function(elephant) {
+  console.log(`${elephant.name} is trotting by`)
+}
