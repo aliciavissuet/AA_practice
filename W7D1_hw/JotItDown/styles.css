@@ -1,0 +1,148 @@
+body {
+    background: transparent;
+    font-family: sans-serif;
+}
+h1 {
+    margin: 0;
+}
+.first {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.first h1 {
+    padding: 10px;
+}
+.head {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    font-family: sans-serif;
+    background: #037c6a;
+    padding: 5px;
+    justify-content: space-between;
+}
+.search-bar > form > input {
+    width: 250px; 
+}
+.search-bar div {
+    justify-content: flex-end;
+}
+.top {
+    display: flex;
+    height: 100px;
+    font-family: sans-serif;
+    margin:0;
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+.top > div {
+    padding-left: 10px;
+}
+.img-1 {
+    width: 50px;
+    height: auto;
+}
+nav > img{
+    height: 25px;
+    width: 25px;
+}
+.drop-down {
+    position: relative;
+    display: inline-block;
+}
+.drop-down-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+.drop-down:hover {
+    display: flex;
+}
+.drop-down:hover .drop-down-content {
+  display: block;
+  position: absolute;
+  left: -150px;
+  top: 20px;
+}
+.drop-down-content > a {
+    display: block;
+}
+.drop-down-content > a:hover {
+    background: lightgray;
+}
+
+.main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    background-image: url('splash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.main h1 {
+    position: absolute;
+    top: 200px;
+    font-size: 60px;
+    text-align: center;
+    font-size: 60px;
+}
+.curr-user {
+    
+    color: white;
+   
+   
+}
+.quotes {
+    background: transparent;
+    opacity: 1;
+    display: absolute;
+    height: 300px;
+    width: 300px;
+    color: black;
+    font-family: sans-serif;
+    
+}
+.list-container {
+    display: flex;
+    flex-direction: row;
+    background: white;
+    height: 400px;
+    align-content: center;
+    padding: 20px;
+}
+.list-form {
+    align-content: center;
+    background: purple;
+    flex: left;
+}
+li {
+    list-style: none;
+    padding-bottom: 5px;
+    font-weight: 300px;
+}
+ul {
+    padding: 0px;
+}
+.other-lists {
+    display: flex;
+    flex-direction: column;
+}
+.other-lists ul {
+    padding-left: 50px;
+}
